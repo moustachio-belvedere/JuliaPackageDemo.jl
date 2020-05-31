@@ -1,6 +1,7 @@
 docs/build/
 docs/site/
-docs/src-staging/
+docs/staging-docs/
+docs/staging-nb/
 examples/.ipynb_checkpoints
 *.jl.cov
 *.jl.*.cov
