@@ -1,0 +1,4 @@
+name = "JuliaPackageDemo"
+uuid = "436bb24b-83cb-42ba-9913-7d4dc472a996"
+authors = ["Louis Kaplan <j.kiszle@gmail.com>"]
+version = "0.1.0"
