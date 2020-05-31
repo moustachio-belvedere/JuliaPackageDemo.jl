@@ -1,14 +1,15 @@
 using JuliaPackageDemo
+using MittagLeffler
 using Test
 
-# include("definitions.jl")
-# include("base.jl")
-# include("datagen.jl")
-# include("IO.jl")
-# include("processing.jl")
+const testx = 0.5
 
-# include(joinpath(@__DIR__, "models", "elements.jl"))
-# include(joinpath(@__DIR__, "models", "maxwell.jl"))
-# include(joinpath(@__DIR__, "models", "kelvinvoigt.jl"))
-# include(joinpath(@__DIR__, "models", "zener.jl"))
-# include(joinpath(@__DIR__, "models", "poynting-thomson.jl"))
+function _coolfunction1(x)
+    (2*x + x^2) == coolfunction1(x)
+end
+@test _coolfunction1(testx)
+
+function _coolfunction2(x)
+    (50*mittleff(0.5, -x) - 10) == coolfunction2(x)
+end
+@test _coolfunction2(testx)
