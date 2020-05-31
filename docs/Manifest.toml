@@ -70,7 +70,9 @@ version = "0.21.0"
 
 [[JuliaPackageDemo]]
 deps = ["MittagLeffler", "Pkg", "Test"]
-path = ".."
+git-tree-sha1 = "96376fd394b9bb884029b9c9460a1b5e0819c48d"
+repo-rev = "master"
+repo-url = ".."
 uuid = "436bb24b-83cb-42ba-9913-7d4dc472a996"
 version = "0.1.0"
 

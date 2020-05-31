@@ -1,4 +1,6 @@
-using Documenter, Literate
+using Documenter
+using Literate
+using JuliaPackageDemo
 
 """
     docprepare()
@@ -21,7 +23,7 @@ function docprepare()
         if endswith(file, "md")
             cp("docs/src/$file", "docs/staging-docs/$file")
         elseif endswith(file, "jl")
-            Literate.markdown("docs/src/$file", outputdir="docs/staging-docs")
+            Literate.markdown("docs/src/$file", "docs/staging-docs/")
         end
     end
 end
@@ -38,6 +40,8 @@ function maindocbuilder()
             source = "staging-docs",
             authors="Louis Kaplan",
             pages = ["Home" => "index.md",
+                     "Simple Examples" => "simpleexamples.md",
+                     "Complex Examples" => "complexexamples.md",
                      "API" => "API.md"])
 
     # deploydocs(repo = "github.com/JuliaRheology/RHEOS.jl.git",
