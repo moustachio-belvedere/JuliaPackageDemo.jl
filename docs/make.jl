@@ -23,7 +23,7 @@ function docprepare()
         if endswith(file, "md")
             cp("docs/src/$file", "docs/staging-docs/$file")
         elseif endswith(file, "jl")
-            Literate.markdown("docs/src/$file", "docs/staging-docs/")
+            Literate.markdown("docs/src/$file", "docs/staging-docs/"; documenter=true)
         end
     end
 end
