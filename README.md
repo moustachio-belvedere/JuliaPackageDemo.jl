@@ -4,7 +4,7 @@
 
 Welcome to JuliaPackageDemo. This file doubles as both a readme and the first page of the documentation.
 
-[travis-img]: https://travis-ci.org/moustachio-belvedere/JuliaPackageDemo.jl.svg
+[travis-img]: https://travis-ci.org/moustachio-belvedere/JuliaPackageDemo.jl.svg?branch=master
 [travis-url]: https://travis-ci.org/moustachio-belvedere/JuliaPackageDemo.jl
 
 [docs-sta-img]: https://img.shields.io/badge/docs-stable-blue.svg
