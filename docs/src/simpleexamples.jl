@@ -12,6 +12,8 @@ timevec = collect(0:0.1:10)
 ## get function values at time points
 data = coolfunction1.(timevec)
 
+#src test that coolfunction1 returns array as expected
+@test typeof(data)==Array{Float64,1} && length(data)==length(timevec) #src
 ## plot the data
 plot(timevec, data)
 
@@ -23,6 +25,8 @@ timevec = collect(0:0.1:10)
 ## get function values at time points
 data = coolfunction2.(timevec)
 
+#src test that coolfunction2 returns array as expected
+@test typeof(data)==Array{Float64,1} && length(data)==length(timevec) #src
 ## plot the data
 plot(timevec, data)
 

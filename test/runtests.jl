@@ -13,3 +13,6 @@ function _coolfunction2(x)
     (50*mittleff(0.5, -x) - 10) == coolfunction2(x)
 end
 @test _coolfunction2(testx)
+
+include(joinpath(@__DIR__, "..", "docs", "src", "simpleexamples.jl"))
+include(joinpath(@__DIR__, "..", "docs", "src", "complexexamples.jl"))
