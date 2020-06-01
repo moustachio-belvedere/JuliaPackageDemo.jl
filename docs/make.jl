@@ -18,6 +18,9 @@ function docprepare()
     # copy readme to staging-docs
     cp("README.md", "docs/staging-docs/index.md")
 
+    # copy assets to staging directory
+    cp("docs/src/assets", "docs/staging-docs/assets")
+
     # iterate through src and convert/copy as appropriate
     for file in readdir("docs/src")
         if endswith(file, "md")
