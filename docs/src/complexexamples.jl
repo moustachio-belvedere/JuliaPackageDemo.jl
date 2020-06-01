@@ -1,29 +1,19 @@
 # # Complex Examples
-# To begin using JuliaPackageDemo.jl we first need to load in the package with the `using` syntax. We will also load in PyPlot.jl so we can plot some of the data.
+# To begin using JuliaPackageDemo.jl we first need to load in the package with the `using` syntax. We will also load in DelimitedFiles.jl so we can import some data.
 
 using JuliaPackageDemo
-using Plots
+using DelimitedFiles
 
-# Next we will generate a time vector and use this as an input to the function [`coolfunction1`](@ref). The result is plotted.
-
-## get time vector
-timevec = collect(0:0.1:10)
-
-## get function values at time points
-data = coolfunction1.(timevec)
-
-## plot the data
-plot(timevec, data)
-
-# For more information on [`coolfunction1`](@ref) please see the [API](@ref) section. No we can try something similar with [`coolfunction2`](@ref):
-
-## get time vector
-timevec = collect(0:0.1:10)
+# Let's load in some data and use it as the input arguments for [`coolfunction1`](@ref).
+inputdataraw = readdlm("assets/data.csv", ',')
+inputdata = vcat(inputdataraw...) 
 
 ## get function values at time points
-data = coolfunction2.(timevec)
+data = coolfunction1.(inputdata)
 
-## plot the data
-plot(timevec, data)
+# For more information on [`coolfunction1`](@ref) please see the [API](@ref) section. Now we can try something similar with [`coolfunction2`](@ref):
+
+## get function values at time points
+data = coolfunction2.(inputdata)
 
 # For more complex examples, see [Simple Examples](@ref) section.

@@ -17,7 +17,9 @@ data = coolfunction1.(timevec)
 ## plot the data
 plot(timevec, data)
 
-# For more information on [`coolfunction1`](@ref) please see the [API](@ref) section. No we can try something similar with [`coolfunction2`](@ref):
+# For more information on [`coolfunction1`](@ref) please see the [API](@ref) section. Now we can try something similar with [`coolfunction2`](@ref):
+#md # !!! note "Beware!"
+#md #     Admonitions are a useful feature of Documenter.jl which would be tricky to use directly from Notebooks.
 
 ## get time vector
 timevec = collect(0:0.1:10)
