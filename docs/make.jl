@@ -44,10 +44,10 @@ function maindocbuilder()
                      "Complex Examples" => "complexexamples.md",
                      "API" => "API.md"])
 
-    # deploydocs(repo = "github.com/JuliaRheology/RHEOS.jl.git",
-    #            deps = nothing,
-    #            make = nothing,
-    #            target = "build")
+    deploydocs(repo = "github.com/moustachio-belvedere/JuliaPackageDemo.jl.git",
+               deps = nothing,
+               make = nothing,
+               target = "build")
 
 end
 
