@@ -15,4 +15,3 @@ end
 @test _coolfunction2(testx)
 
 include(joinpath(@__DIR__, "..", "docs", "src", "simpleexamples.jl"))
-include(joinpath(@__DIR__, "..", "docs", "src", "complexexamples.jl"))
