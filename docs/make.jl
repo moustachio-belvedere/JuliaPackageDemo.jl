@@ -31,9 +31,26 @@ function docprepare()
     end
 end
 
+function notebookprepare()
+    # create notebook staging dir
+    mkdir("docs/staging-docs/notebooks")
+
+    # copy assets to notebooks staging directory
+    cp("docs/src/assets", "docs/staging-docs/notebooks/assets")
+
+    for file in readdir("docs/src")
+        if endswith(file, "jl")
+            Literate.notebook("docs/src/$file", "docs/staging-docs/notebooks/")
+        end
+    end
+end
+
 function maindocbuilder()
     # prepare doc files from source
     docprepare()
+
+    # prepare notebook files from source
+    notebookprepare()
 
     # build docs from staging area
     makedocs(modules=[JuliaPackageDemo],

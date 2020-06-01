@@ -1,4 +1,7 @@
 # # Complex Examples
+#md # [![](https://mybinder.org/badge_logo.svg)](@__BINDER_ROOT_URL__/notebooks/complexexamples.ipynb)
+#md # [![](https://img.shields.io/badge/show-nbviewer-579ACA.svg)](@__NBVIEWER_ROOT_URL__/notebooks/complexexamples.ipynb)
+
 # To begin using JuliaPackageDemo.jl we first need to load in the package with the `using` syntax. We will also load in DelimitedFiles.jl so we can import some data.
 
 using JuliaPackageDemo
