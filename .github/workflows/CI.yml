@@ -2,8 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [master] # only build docs from master
-    tags: ["*"]
+    branches: 
+      - master # add more branches as necessary
+    tags: "*"
   pull_request:
 
 jobs:
@@ -28,9 +29,14 @@ jobs:
       strategy:
         fail-fast: false
         matrix:
-          julia-version: ["1", "nightly"] # test on Latest and nightly
-          arch: ["x64"] # only test 64 bit
-          os: ["ubuntu-latest", "windows-latest"] # add mac test if needed
+          julia-version:
+            - 1
+            - nightly # test on Latest and nightly
+          arch: 
+            - x64 # only test 64 bit
+          os: 
+            -ubuntu-latest
+            -windows-latest # add mac test if needed
           
       steps:
         - uses: actions/checkout@v2
