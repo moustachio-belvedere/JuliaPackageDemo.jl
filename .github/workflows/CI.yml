@@ -2,13 +2,14 @@ name: CI
 
 on:
   push:
-    branches: 
-      - master # add more branches as necessary
+    branches: # add more branches as necessary
+      - master
     tags: "*"
   pull_request:
 
 jobs:
   Documentation:
+    name: Documentation Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,19 +25,19 @@ jobs:
         run: julia --project=docs/ docs/make.jl
 
   Testing:
-      name: Julia ${{ matrix.version }} - ${{ matrix.os }} - ${{ matrix.arch }}
+      name: Test: ${{ matrix.version }} - ${{ matrix.os }} # - ${{ matrix.arch }}
       runs-on: ${{ matrix.os }}
       strategy:
         fail-fast: false
         matrix:
-          julia-version:
+          version: # test on Latest and nightly
             - 1
-            # - nightly # test on Latest and nightly
-          arch: 
-            - x64 # only test 64 bit
-          os: 
+            - nightly
+          arch: # only test 64 bit 
+            - x64
+          os: # add mac test if needed
             - ubuntu-latest
-            - windows-latest # add mac test if needed
+            - windows-latest
       steps:
         - uses: actions/checkout@v2
         - uses: julia-actions/setup-julia@latest
