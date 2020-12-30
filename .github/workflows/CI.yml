@@ -35,8 +35,8 @@ jobs:
           arch: 
             - x64 # only test 64 bit
           os: 
-            -ubuntu-latest
-            -windows-latest # add mac test if needed
+            - ubuntu-latest
+            - windows-latest # add mac test if needed
           
       steps:
         - uses: actions/checkout@v2
