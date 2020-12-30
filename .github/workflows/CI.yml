@@ -30,8 +30,8 @@ jobs:
         fail-fast: false
         matrix:
           julia-version:
-            - 1
-            - nightly # test on Latest and nightly
+            - "1"
+            # - nightly # test on Latest and nightly
           arch: 
             - x64 # only test 64 bit
           os: 
